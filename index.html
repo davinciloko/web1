@@ -3,46 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto en Vercel</title>
+    <title>Peluquería Lisette | Estilo y Cuidado en Puchuncaví</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0f172a; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .bg-gradient-custom { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); }
+        .btn-float { position: fixed; bottom: 30px; right: 30px; z-index: 100; transition: all 0.3s ease; }
+        .btn-float:hover { transform: scale(1.1) rotate(5deg); }
     </style>
 </head>
-<body class="text-slate-200 min-h-screen flex items-center justify-center p-6">
+<body class="bg-gradient-custom text-gray-900 scroll-smooth">
 
-    <main class="glass max-w-2xl w-full rounded-2xl p-8 md:p-12 shadow-2xl">
-        <header class="mb-8">
-            <div class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-sm font-medium mb-4">
-                🚀 Desplegado con éxito
+    <a href="https://wa.me/56985044921" target="_blank" class="btn-float bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center shadow-sm">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-pink-500 rounded-xl flex items-center justify-center text-white">
+                    <i data-lucide="scissors" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-gray-800">Peluquería Lisette</span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
-                Esta es una prueba
-            </h1>
-            <p class="mt-4 text-slate-400 text-lg">
-                Esta es una página de prueba para validar el flujo de integración continua. Cada cambio en el código se reflejará aquí automáticamente.
-            </p>
-        </header>
-
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-                <h3 class="font-semibold text-white">CI/CD Activo</h3>
-                <p class="text-sm text-slate-400">El despliegue automático está funcionando mediante GitHub Actions en Vercel.</p>
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
+                <a href="#inicio" class="hover:text-pink-500 transition">Inicio</a>
+                <a href="#servicios" class="hover:text-pink-500 transition">Servicios</a>
+                <a href="#ubicacion" class="hover:text-pink-500 transition">Ubicación</a>
+                <a href="https://wa.me/56985044921" class="bg-pink-500 text-white px-5 py-2.5 rounded-xl hover:bg-pink-600 transition shadow-lg shadow-pink-200">Reservar Cita</a>
             </div>
-            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-                <h3 class="font-semibold text-white">SSL Seguro</h3>
-                <p class="text-sm text-slate-400">La conexión está cifrada y protegida por certificados automáticos.</p>
+        </div>
+    </nav>
+
+    <header id="inicio" class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-xs font-bold uppercase tracking-widest">Puchuncaví, Región de Valparaíso</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-gray-900">
+                    Resalta tu <span class="text-pink-500 underline decoration-pink-200">Belleza Natural</span>
+                </h1>
+                <p class="text-lg text-gray-500 max-w-lg mx-auto md:mx-0">
+                    Servicios de alta peluquería en Los Pescadores. Calidad de 5 estrellas para un cambio de look profesional.
+                </p>
+                <div class="pt-4">
+                    <a href="#ubicacion" class="inline-flex items-center gap-2 text-gray-900 font-bold hover:gap-4 transition-all">
+                        Visítanos hoy <i data-lucide="arrow-right" class="w-5 h-5 text-pink-500"></i>
+                    </a>
+                </div>
             </div>
-        </section>
+            <div class="flex-1 relative">
+                <div class="absolute -z-10 top-10 -right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Salón de belleza" 
+                     class="w-full h-[500px] object-cover rounded-[3rem] shadow-2xl border-8 border-white">
+            </div>
+        </div>
+    </header>
 
-        <footer class="mt-12 pt-8 border-t border-white/10 flex justify-between items-center">
-            <span class="text-sm text-slate-500">2026 • Prueba de Sistemas</span>
-            <a href="https://vercel.com" target="_blank" class="text-sm text-blue-400 hover:text-blue-300 transition-colors">
-                Ver panel de Vercel →
-            </a>
-        </footer>
-    </main>
+    <section id="servicios" class="py-24 bg-white rounded-[4rem] shadow-sm">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900">Nuestros Servicios</h2>
+                <p class="text-gray-500 mt-4 italic">Abierto de Lunes a Domingo de 10:00 a 22:00 hrs</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-pink-50 hover:bg-pink-100 transition duration-300 group">
+                    <i data-lucide="sparkles" class="w-10 h-10 text-pink-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-2">Corte & Estilo</h3>
+                    <p class="text-sm text-gray-600">Diseños personalizados según la forma de tu rostro y últimas tendencias.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-slate-100 transition duration-300 group">
+                    <i data-lucide="palette" class="w-10 h-10 text-slate-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-2">Coloración Profesional</h3>
+                    <p class="text-sm text-gray-600">Tintura, balayage y reflejos con productos que cuidan tu cabello.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-pink-50 hover:bg-pink-100 transition duration-300 group">
+                    <i data-lucide="smile" class="w-10 h-10 text-pink-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-2">Tratamientos</h3>
+                    <p class="text-sm text-gray-600">Hidratación profunda y cuidado capilar intensivo para recuperar el brillo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="ubicacion" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+            <div class="flex-1 space-y-6">
+                <h2 class="text-4xl font-extrabold">¿Dónde estamos?</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-pink-100">
+                        <i data-lucide="map-pin" class="text-pink-500"></i>
+                        <p class="font-medium text-gray-700">Los Pescadores, Puchuncaví, Región de Valparaíso</p>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-pink-100">
+                        <i data-lucide="phone" class="text-pink-500"></i>
+                        <p class="font-medium text-gray-700">+56 9 8504 4921</p>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-pink-100">
+                        <i data-lucide="star" class="text-yellow-500 fill-current"></i>
+                        <p class="font-medium text-gray-700">Calificación 5 Estrellas en Google Maps</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 w-full h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white relative">
+                <iframe 
+                    class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.123!2d-71.433!3d-32.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689b98db3a3a79f%3A0x31d7120c579ee154!2zUGVsdXF1ZXLDrWEgTGlzZXR0ZQ!5e0!3m2!1ses!2scl!4v1714000000000" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-400 text-sm">
+        <div class="max-w-6xl mx-auto px-6 border-t border-pink-200 pt-8">
+            <p>© 2026 Peluquería Lisette - Los Pescadores, Puchuncaví.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
