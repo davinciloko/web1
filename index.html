@@ -3,135 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peluquería Lisette | Professional Hair Studio</title>
+    <title>Peluquería Lisette | Tu estilo en Puchuncaví</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-gradient { background: linear-gradient(to right, #ec4899, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .map-container { filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+        body { font-family: 'Quicksand', sans-serif; }
+        .soft-gradient { background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.1); }
     </style>
 </head>
-<body class="text-slate-200 selection:bg-pink-500/30">
+<body class="bg-white text-slate-700">
 
-    <a href="https://wa.me/56985044921" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform">
-        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    <a href="https://wa.me/56985044921" target="_blank" class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
     </a>
 
-    <nav class="fixed w-full z-50 p-6">
-        <div class="max-w-7xl mx-auto glass-card rounded-3xl px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="bg-pink-500 p-2 rounded-xl text-white shadow-lg shadow-pink-500/20">
-                    <i data-lucide="scissors" class="w-5 h-5"></i>
-                </div>
-                <span class="font-extrabold text-2xl tracking-tighter text-white">LISETTE</span>
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-pink-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i data-lucide="sparkles" class="text-pink-500"></i>
+                <span class="text-xl font-bold tracking-tight text-slate-800">Peluquería Lisette</span>
             </div>
-            <div class="hidden md:flex gap-10 font-bold text-xs uppercase tracking-[0.2em] text-slate-400">
-                <a href="#inicio" class="hover:text-pink-400 transition">Inicio</a>
-                <a href="#servicios" class="hover:text-pink-400 transition">Servicios</a>
-                <a href="#informacion" class="hover:text-pink-400 transition">Contacto</a>
+            <div class="flex gap-6 items-center">
+                <a href="#contacto" class="hidden md:block text-sm font-semibold hover:text-pink-500 transition">Ubicación</a>
+                <a href="https://wa.me/56985044921" class="bg-pink-500 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-pink-600 transition">Reservar Hora</a>
             </div>
         </div>
     </nav>
 
-    <section id="inicio" class="relative min-h-screen flex items-center pt-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-bold uppercase tracking-widest">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
-                    </span>
-                    Abierto Hoy en Puchuncaví
-                </div>
-                <h1 class="text-6xl md:text-8xl font-extrabold leading-[0.9] text-white tracking-tighter">
-                    Estilo <br><span class="text-gradient italic">Sin Límites.</span>
+    <section class="soft-gradient py-16 md:py-24 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
+                    Expertos en <span class="text-pink-500">Belleza & Bienestar</span>
                 </h1>
-                <p class="text-lg text-slate-400 max-w-md leading-relaxed">
-                    Especialistas en transformación capilar y cuidado profesional. Elevamos tu imagen con técnicas de vanguardia en el sector Los Pescadores.
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Ubicados en el corazón de **Puchuncaví**, ofrecemos una atención personalizada para resaltar tu mejor versión en un ambiente relajado y profesional.
                 </p>
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="https://wa.me/56985044921" class="bg-pink-500 text-white px-10 py-5 rounded-2xl font-bold hover:bg-pink-600 transition shadow-xl shadow-pink-500/20 text-lg">
-                        Agendar Cita
-                    </a>
+                <div class="flex items-center gap-4 text-sm font-bold text-slate-500">
+                    <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-4 text-green-500"></i> 5.0 Google Reviews</span>
+                    <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-4 text-green-500"></i> Los Pescadores</span>
                 </div>
             </div>
             <div class="relative">
-                <div class="absolute -inset-4 bg-pink-500/20 rounded-[4rem] blur-3xl"></div>
-                <img src="https://images.unsplash.com/photo-1560869713-7d0a29430863?q=80&w=1200&auto=format&fit=crop" 
-                     class="relative rounded-[3rem] shadow-2xl h-[550px] w-full object-cover border border-white/10" alt="Peluquería Lisette">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800" 
+                     alt="Interior salón" class="rounded-3xl shadow-2xl border-4 border-white">
             </div>
         </div>
     </section>
 
-    <section id="informacion" class="py-32 px-6 bg-slate-900/50">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-8">
+    <section id="contacto" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
                 
-                <div class="glass-card p-10 rounded-[2.5rem] space-y-6">
-                    <div class="w-12 h-12 bg-pink-500/20 rounded-2xl flex items-center justify-center text-pink-500">
-                        <i data-lucide="clock"></i>
-                    </div>
-                    <h3 class="text-2xl font-extrabold text-white">Horario de Atención</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center pb-2 border-b border-white/5">
-                            <span class="text-slate-400">Lunes - Domingo</span>
-                            <span class="font-bold text-pink-400">10:00 - 22:00</span>
-                        </div>
-                        <p class="text-xs text-slate-500 pt-2 italic">Atención continuada para adaptarnos a tu ritmo de vida.</p>
-                    </div>
+                <div class="p-8 bg-pink-50 rounded-3xl card-hover border border-pink-100">
+                    <i data-lucide="clock" class="text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Horario</h3>
+                    <p class="text-slate-600 text-sm">Lunes a Domingo</p>
+                    <p class="text-pink-600 font-bold text-lg">10:00 - 22:00 hrs</p>
                 </div>
 
-                <div class="glass-card p-10 rounded-[2.5rem] space-y-6">
-                    <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400">
-                        <i data-lucide="map-pin"></i>
-                    </div>
-                    <h3 class="text-2xl font-extrabold text-white">¿Cómo llegar?</h3>
-                    <p class="text-slate-400 leading-relaxed">
-                        Nos encontramos en el sector de **Los Pescadores**, en la comuna de **Puchuncaví**, Región de Valparaíso.
-                    </p>
-                    <a href="https://maps.google.com" target="_blank" class="inline-block text-sm font-bold text-pink-400 hover:underline">Abrir en Google Maps →</a>
+                <div class="p-8 bg-slate-50 rounded-3xl card-hover border border-slate-100">
+                    <i data-lucide="map-pin" class="text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Dirección</h3>
+                    <p class="text-slate-600 text-sm">Sector Los Pescadores</p>
+                    <p class="text-slate-800 font-bold">Puchuncaví, Región de Valparaíso</p>
                 </div>
 
-                <div class="glass-card p-10 rounded-[2.5rem] space-y-6">
-                    <div class="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-400">
-                        <i data-lucide="phone"></i>
-                    </div>
-                    <h3 class="text-2xl font-extrabold text-white">Contacto Directo</h3>
-                    <div class="space-y-4">
-                        <p class="text-3xl font-bold text-white tracking-tighter">+56 9 8504 4921</p>
-                        <p class="text-slate-400 text-sm">Reserva tu hora vía WhatsApp para una atención sin esperas.</p>
-                    </div>
+                <div class="p-8 bg-pink-50 rounded-3xl card-hover border border-pink-100">
+                    <i data-lucide="phone" class="text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Reserva</h3>
+                    <p class="text-slate-600 text-sm">Agenda vía WhatsApp</p>
+                    <p class="text-pink-600 font-bold text-lg">+56 9 8504 4921</p>
                 </div>
 
             </div>
-        </div>
-    </section>
 
-    <section id="mapa" class="py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="h-[450px] rounded-[3.5rem] overflow-hidden border border-white/10 shadow-2xl relative">
-                <iframe 
-                    class="w-full h-full map-container"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.5746777651!2d-71.4116!3d-32.723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQzJzIyLjgiUyA3McKwMjQnNDEuOCJX!5e0!3m2!1ses!2scl!4v1714000000000" 
-                    style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-                <div class="absolute top-6 left-6 glass-card px-6 py-3 rounded-2xl">
-                    <p class="text-xs font-bold text-pink-400 uppercase tracking-widest">Ubicación Real</p>
-                    <p class="text-sm text-white">Los Pescadores, Puchuncaví</p>
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-slate-900 flex items-center gap-2">
+                    <i data-lucide="navigation" class="text-pink-500"></i> Nuestra Ubicación Exacta
+                </h2>
+                <div class="w-full h-[450px] rounded-[2.5rem] overflow-hidden shadow-inner border-2 border-slate-100 relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.657963665516!2d-71.415446024103!3d-32.721697473685934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689b9ed53a3a79f%3A0x31d7120c579ee154!2sPeluquer%C3%ADa%20Lisette!5e0!3m2!1ses!2scl!4v1714000000000!5m2!1ses!2scl" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="flex justify-center pt-4">
+                    <a href="https://maps.app.goo.gl/ChIJn6ONU-25iZYRVOGeVwwS1zE" target="_blank" class="text-slate-400 text-sm hover:text-pink-500 flex items-center gap-2 underline transition">
+                        Ver directamente en Google Maps
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center border-t border-white/5">
-        <p class="text-slate-600 font-bold text-[10px] uppercase tracking-[0.4em]">
-            © 2026 Peluquería Lisette • Excellence in Hair Care • Puchuncaví, Chile
+    <footer class="py-12 bg-slate-50 border-t border-slate-100 text-center">
+        <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">
+            © 2026 Peluquería Lisette | Puchuncaví, Chile
         </p>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
