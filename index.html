@@ -3,168 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peluquería Lisette | Estilo y Cuidado en Puchuncaví</title>
+    <title>Peluquería Lisette | Estilo Innovador en Puchuncaví</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
-        .bg-gradient-custom { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); }
-        .btn-float { position: fixed; bottom: 30px; right: 30px; z-index: 100; transition: all 0.3s ease; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.4); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .card-shadow { box-shadow: 0 20px 40px -15px rgba(219, 39, 119, 0.1); }
+        .snap-x { scroll-snap-type: x mandatory; }
+        .snap-center { scroll-snap-align: center; }
     </style>
 </head>
-<body class="bg-gradient-custom text-gray-900 scroll-smooth">
+<body class="bg-slate-50 text-slate-900 scroll-smooth">
 
-    <a href="https://wa.me/56985044921" target="_blank" class="btn-float bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center">
+    <a href="https://wa.me/56985044921" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center shadow-sm">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-pink-500 rounded-xl flex items-center justify-center text-white">
-                    <i data-lucide="scissors" class="w-6 h-6"></i>
-                </div>
-                <span class="text-xl font-extrabold tracking-tight text-gray-800">Peluquería Lisette</span>
+    <nav class="fixed w-full z-50 p-4 md:p-6">
+        <div class="max-w-7xl mx-auto glass rounded-3xl px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-pink-500 p-2 rounded-xl text-white"><i data-lucide="sparkles"></i></div>
+                <span class="font-extrabold text-xl tracking-tighter">LISETTE</span>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
+            <div class="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest text-slate-500">
                 <a href="#inicio" class="hover:text-pink-500 transition">Inicio</a>
-                <a href="#servicios" class="hover:text-pink-500 transition">Servicios</a>
-                <a href="#testimonios" class="hover:text-pink-500 transition">Reseñas</a>
+                <a href="#galeria" class="hover:text-pink-500 transition">Galería</a>
+                <a href="#opiniones" class="hover:text-pink-500 transition">Reseñas</a>
                 <a href="#ubicacion" class="hover:text-pink-500 transition">Ubicación</a>
             </div>
         </div>
     </nav>
 
-    <header id="inicio" class="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="flex-1 space-y-6 text-center md:text-left">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-xs font-bold uppercase tracking-widest">Puchuncaví, Región de Valparaíso</span>
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-gray-900">
-                    Tu cabello, <span class="text-pink-500 underline decoration-pink-200">nuestra pasión</span>
-                </h1>
-                <p class="text-lg text-gray-500 max-w-lg mx-auto md:mx-0">
-                    Calidad excepcional y atención personalizada en Los Pescadores. Ven a vivir la experiencia de 5 estrellas.
-                </p>
-                <div class="pt-4">
-                    <a href="https://wa.me/56985044921" target="_blank" class="bg-pink-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-pink-600 transition shadow-xl shadow-pink-200">
-                        Agendar por WhatsApp
-                    </a>
-                </div>
-            </div>
-            <div class="flex-1 relative">
-                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop" 
-                     alt="Interior Peluquería" 
-                     class="w-full h-[450px] object-cover rounded-[3rem] shadow-2xl border-8 border-white">
-            </div>
-        </div>
-    </header>
-
-<section id="testimonios" class="py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Opiniones de nuestros clientes</h2>
-            <div class="flex justify-center items-center gap-2 text-yellow-500">
-                <i data-lucide="star" class="fill-current"></i>
-                <i data-lucide="star" class="fill-current"></i>
-                <i data-lucide="star" class="fill-current"></i>
-                <i data-lucide="star" class="fill-current"></i>
-                <i data-lucide="star" class="fill-current"></i>
-                <span class="text-gray-900 font-bold ml-2">5.0 Estrellas</span>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="glass p-8 rounded-3xl shadow-sm border-b-4 border-pink-500">
-                <div class="flex gap-1 text-yellow-500 mb-4">
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                </div>
-                <p class="text-gray-600 italic mb-6">"Excelente atención, Lisette muy profesional y amorosa. El lugar muy limpio y acogedor. 100% recomendada."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center font-bold text-pink-600">CV</div>
-                    <div>
-                        <p class="font-bold text-sm">Carolina Valenzuela</p>
-                        <p class="text-xs text-gray-400">Hace 3 meses</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass p-8 rounded-3xl shadow-sm">
-                <div class="flex gap-1 text-yellow-500 mb-4">
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                </div>
-                <p class="text-gray-600 italic mb-6">"Muy buena atención, quedé feliz con mi corte de pelo. Un lugar muy grato en la zona de Los Pescadores."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500">JP</div>
-                    <div>
-                        <p class="font-bold text-sm">Juan Pablo S.</p>
-                        <p class="text-xs text-gray-400">Hace 1 mes</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass p-8 rounded-3xl shadow-sm">
-                <div class="flex gap-1 text-yellow-500 mb-4">
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                </div>
-                <p class="text-gray-600 italic mb-6">"Excelente servicio y disponibilidad. Muy puntual con las horas agendadas por WhatsApp."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500">AV</div>
-                    <div>
-                        <p class="font-bold text-sm">Andrea V.</p>
-                        <p class="text-xs text-gray-400">Hace 2 semanas</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <section id="ubicacion" class="py-24 bg-white rounded-t-[4rem]">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
-                <h2 class="text-4xl font-extrabold text-gray-900">Visítanos en Puchuncaví</h2>
-                <div class="space-y-4">
-                    <div class="flex items-start gap-4 p-6 rounded-3xl bg-slate-50">
-                        <i data-lucide="map-pin" class="text-pink-500 w-6 h-6"></i>
-                        <div>
-                            <p class="font-bold">Dirección</p>
-                            <p class="text-gray-500">Los Pescadores, Puchuncaví, Región de Valparaíso</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 p-6 rounded-3xl bg-slate-50">
-                        <i data-lucide="clock" class="text-pink-500 w-6 h-6"></i>
-                        <div>
-                            <p class="font-bold">Horario de Atención</p>
-                            <p class="text-gray-500">Lunes a Domingo: 10:00 - 22:00</p>
-                        </div>
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-none tracking-tighter">
+                    Crea tu <span class="text-pink-500 italic">Mejor Versión</span>.
+                </h1>
+                <p class="text-xl text-slate-500 max-w-md">Especialistas en coloración, cortes de vanguardia y tratamientos capilares en Los Pescadores, Puchuncaví.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://wa.me/56985044921" class="bg-slate-900 text-white px-8 py-5 rounded-2xl font-bold hover:bg-pink-600 transition shadow-xl">Agendar ahora</a>
+                    <div class="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex text-yellow-400"><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i></div>
+                        <span class="font-bold text-sm">5.0 Google Reviews</span>
                     </div>
                 </div>
             </div>
-            <div class="h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
-                <iframe 
-                    class="w-full h-full"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.123!2d-71.415!3d-32.721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689b986538fa39f%3A0x31d7120c179ee154!2zUGVsdXF1ZXLDrWEgTGlzZXR0ZQ!5e0!3m2!1ses!2scl!4v1710000000000!5m2!1ses!2scl" 
-                    style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+            <div class="relative group">
+                <div class="absolute inset-0 bg-pink-400 rounded-[4rem] rotate-3 group-hover:rotate-6 transition-transform"></div>
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1200&auto=format&fit=crop" class="relative rounded-[4rem] shadow-2xl h-[600px] w-full object-cover -rotate-3 group-hover:rotate-0 transition-all duration-700" alt="Lisette Peluquería">
             </div>
         </div>
     </section>
 
-    <script>
-        lucide.createIcons();
-    </script>
+    <section id="galeria" class="py-32 px-6 bg-white rounded-[5rem]">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl font-extrabold tracking-tight italic">Galería de Estilos</h2>
+                <p class="text-slate-400 uppercase tracking-widest text-xs font-bold mt-2">Nuestros trabajos recientes</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1620331311520-246422ff83f9?q=80&w=600&auto=format&fit=crop" class="rounded-3xl h-64 w-full object-cover hover:scale-105 transition duration-500" alt="Coloración">
+                <img src="https://images.unsplash.com/photo-1522336572018-3b89571aa903?q=80&w=600&auto=format&fit=crop" class="rounded-3xl h-80 w-full object-cover md:mt-12 hover:scale-105 transition duration-500" alt="Corte">
+                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=600&auto=format&fit=crop" class="rounded-3xl h-64 w-full object-cover hover:scale-105 transition duration-500" alt="Tratamiento">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop" class="rounded-3xl h-80 w-full object-cover md:mt-12 hover:scale-105 transition duration-500" alt="Peinado">
+            </div>
+        </div>
+    </section>
+
+    <section id="opiniones" class="py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-4xl font-extrabold italic">Lo que dicen</h2>
+                <p class="text-slate-400 uppercase tracking-widest text-xs font-bold">Reseñas directas de Google</p>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="document.getElementById('carousel').scrollBy({left: -300, behavior: 'smooth'})" class="p-3 bg-white rounded-full border border-slate-200 hover:bg-slate-100"><i data-lucide="chevron-left"></i></button>
+                <button onclick="document.getElementById('carousel').scrollBy({left: 300, behavior: 'smooth'})" class="p-3 bg-white rounded-full border border-slate-200 hover:bg-slate-100"><i data-lucide="chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div id="carousel" class="flex gap-6 overflow-x-auto px-6 md:px-[calc((100vw-80rem)/2)] snap-x no-scrollbar pb-10">
+            <div class="min-w-[320px] md:min-w-[400px] snap-center p-10 bg-white rounded-[3rem] border border-slate-100 card-shadow flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex text-yellow-400"><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i></div>
+                    <p class="text-lg font-medium italic text-slate-700">"Excelente atención, Lisette muy profesional y amorosa. El lugar muy limpio y acogedor. 100% recomendada."</p>
+                </div>
+                <div class="flex items-center gap-4 mt-8">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center font-bold text-pink-600 uppercase">CV</div>
+                    <div><h4 class="font-bold">Carolina Valenzuela</h4><p class="text-xs text-slate-400 uppercase tracking-widest">Hace 3 meses</p></div>
+                </div>
+            </div>
+            <div class="min-w-[320px] md:min-w-[400px] snap-center p-10 bg-white rounded-[3rem] border border-slate-100 card-shadow flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex text-yellow-400"><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i></div>
+                    <p class="text-lg font-medium italic text-slate-700">"Me encanta ir, es un lugar lleno de luz y la atención de Lisette es espectacular. Mis cortes siempre quedan perfectos."</p>
+                </div>
+                <div class="flex items-center gap-4 mt-8">
+                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 uppercase">MG</div>
+                    <div><h4 class="font-bold">Marcela García</h4><p class="text-xs text-slate-400 uppercase tracking-widest">Local Guide</p></div>
+                </div>
+            </div>
+            <div class="min-w-[320px] md:min-w-[400px] snap-center p-10 bg-white rounded-[3rem] border border-slate-100 card-shadow flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex text-yellow-400"><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i><i data-lucide="star" class="fill-current w-4"></i></div>
+                    <p class="text-lg font-medium italic text-slate-700">"Puntualidad y profesionalismo. Es muy difícil encontrar una peluquera que entienda tan bien lo que uno quiere."</p>
+                </div>
+                <div class="flex items-center gap-4 mt-8">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center font-bold text-pink-600 uppercase">AV</div>
+                    <div><h4 class="font-bold">Andrea Villarroel</h4><p class="text-xs text-slate-400 uppercase tracking-widest">Hace 1 mes</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h2 class="text-4xl font-extrabold italic leading-tight">Encuéntranos en <br><span class="text-pink-500">Puchuncaví</span></h2>
+                <div class="p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm space-y-6">
+                    <div class="flex gap-4">
+                        <i data-lucide="map-pin" class="text-pink-500"></i>
+                        <p class="font-bold">Los Pescadores, Puchuncaví, Región de Valparaíso</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <i data-lucide="clock" class="text-pink-500"></i>
+                        <div><p class="font-bold">Lunes a Domingo</p><p class="text-slate-400">09:00 - 19:00 hrs</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[500px] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white relative">
+                <iframe class="w-full h-full grayscale hover:grayscale-0 transition-all duration-1000" src="http://googleusercontent.com/maps.google.com/6" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-100 text-center">
+        <p class="text-slate-400 font-bold text-xs uppercase tracking-[0.3em]">© 2026 Peluquería Lisette • Diseño Innovador</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
 </body>
 </html>
